@@ -9,8 +9,8 @@ pd.set_option('display.width', None)  # Автоматичне розширен�
 pd.set_option('display.max_colwidth', None)  # Показувати повний текст у стовпцях
 
 
-file_error_stan = r"C:\Users\user\PycharmProjects\data_drought\test_data\ТСГ-6_2016\ТСГ-6_2016_Івано-Франківська\Коломия\картопля\ТСГ-6_Коломия_07_2016_картопля.xls"
-file_path = '.\ТСГ-6_2016_2016_Броди_06_2016_картопля.xls'
+file_error_stan = r"C:\Users\5302\PycharmProjects\data_drougt\ТСГ-6_2016_2016_Броди_06_2016_картопля.xls"
+file_path = r'C:\Users\5302\PycharmProjects\data_drougt\DATA_base_soil_water_cleaned\ТСГ-6_2017\ТСГ-6_2017_Волинська\Любешів\Овес\ТСГ-6_2017_2017_Любешів_03_2017_овес.xls'
 file_path1 = '.\ТСХ-6_Новодністровськ_07_2021_люцерна.xlsx'
 file_path2 = '.\ТСХ-6_Чернівці_08_2021_соя.xlsx'
 # file_date_nevalid=r"C:\Users\user\PycharmProjects\data_drought\DATA_base_soil_water\ТСГ-6_2016\ТСГ-6_2016_Івано-Франківська\Долина\зяб\ТСГ-6_Долина_08_2015_зяб.xls"
@@ -36,17 +36,13 @@ def get_weather_station( data):
 
 # Спробуємо відкрити файл
 try:
-    # data = pd.read_excel(file_error_stan)
-    data1 = pd.read_excel(file_path)
-    data2 = pd.read_excel(file_path2)
+    data = pd.read_excel(file_error_stan)
 
-    # data3= pd.read_excel(file_date_nevalid)
-    data4 = pd.read_excel(file_date_nevalid_dot)
 
     print("\nВміст файлу:")
     # print(data)  # Виводить увесь вміст файла
     # print(data.iloc[0:78])
-    print(data1.iloc[0:78])
+    print(data.iloc[0:78])
     print("\n NO VALID DATE MONTH")
     # print(data3.iloc[0:73, 0:2])
     print("\n NO VALID DATE DOT")
